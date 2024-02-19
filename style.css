@@ -18,14 +18,27 @@ body{
     width: 100%;
 
 }
+
 .menu{
     display: flex;
     list-style-type: none;
 }
-nav{
+.desktop{
+    display: block;
+}
+.nav{
     display: flex;
-    position: fixed;
-    z-index: 2;
+    /* position: fixed; */
+    /* z-index: 2; */
+    width: 100%;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+}
+.mobile-div{
+    display: none;
+}
+.nav-mobile{
     width: 100%;
     background-color: white;
     align-items: center;
@@ -55,8 +68,17 @@ nav ul li a:hover{
 
 }
 
-
-
+#showMobilemenu{
+    display: none;
+    width: 100%;
+    align-items: center;
+}
+#showMobilemenu .menu{
+    align-items: center;
+}
+#showMobilemenu .button button{
+    margin: 5px  30px 5px 30px;
+}
 #middle-section{
     width: 100%;
     height: 700px;
@@ -75,6 +97,7 @@ nav ul li a:hover{
     text-align: center;
     padding: 20px;
 }
+
 .aboutme{
     display: flex;
     padding: 10px;
@@ -130,16 +153,65 @@ nav ul li a:hover{
 }
 
 
+/* contact */
+
+#contact{
+    width: 100%;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.contactme1{
+    display: flex;
+}
+#contact-text{
+    padding: 0px 250px 30px 250px;
+    text-align: center;
+}
+#contact-button button{
+    padding:8px;
+}
+
+#message{
+    padding: 20px;
+    margin: 20px;
+    display: none;
+}
+#message input{
+ padding: 5px;
+ margin: 10px;
+ width:40%;
+}
+#message-text{
+    height: 100px;
+    width: 40%;
+}
+.icon-logo{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
 
 @media only screen and (max-width: 600px){
     nav .button{
         display: flex;
         column-gap: 10px;
     }
-    nav{
-        flex-direction: column;
-        position: fixed;
+    .desktop{
+        display: none;
     }
+   #header ul{
+    flex-direction: column;
+   }
+  .button{
+    padding: 5px;
+  }
+    
     #middle-section{
         width: 100%;
         height: 700px;
@@ -156,5 +228,12 @@ nav ul li a:hover{
     
     .aboutme1{
         padding: 10px;
+    }
+    #contact-text {
+        padding: 0px 10px 30px 10px;
+        text-align: center;
+    }
+    .mobile-div{
+        display: block;
     }
 }
